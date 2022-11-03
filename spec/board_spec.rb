@@ -31,6 +31,18 @@ describe Board do
     end
   end
 
-  
+  describe "#valid_move?" do
+    it "returns true" do
+      valid_entry = 3
+      turn = board.valid_move?(valid_entry)
+      expect(turn).to be true
+    end
+
+    it "returns false" do 
+      invalid_entry = 42
+      turn = board.valid_move?(invalid_entry)
+      expect(turn).to be false
+    end
+  end
 
 end
